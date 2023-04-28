@@ -1,4 +1,4 @@
-package it.gov.pagopa.quarkustemplate.resources;
+package it.gov.pagopa.nodetscollector.resources;
 
 
 import io.quarkus.test.junit.QuarkusTest;
@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 import static io.restassured.RestAssured.given;
 
 @QuarkusTest
-class GenericTest {
+class GenericResourceTest {
 
     @Test
     public void info(){

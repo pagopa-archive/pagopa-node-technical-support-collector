@@ -1,6 +1,6 @@
-package it.gov.pagopa.quarkustemplate.resources;
+package it.gov.pagopa.nodetscollector.resources;
 
-import it.gov.pagopa.quarkustemplate.models.AppInfo;
+import it.gov.pagopa.nodetscollector.models.AppInfo;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
@@ -17,16 +17,15 @@ import javax.ws.rs.core.UriBuilder;
 
 @Path("")
 @Produces(value = MediaType.APPLICATION_JSON)
-public class Generic {
+public class GenericResource {
     @ConfigProperty(name = "quarkus.application.name", defaultValue = "")
-    private String name;
+    String name;
 
     @ConfigProperty(name = "quarkus.application.version", defaultValue = "")
-    private String version;
+    String version;
 
     @ConfigProperty(name = "quarkus.application.environment", defaultValue = "")
-    private String environment;
-
+    String environment;
 
     @Operation(hidden = true)
     @GET
